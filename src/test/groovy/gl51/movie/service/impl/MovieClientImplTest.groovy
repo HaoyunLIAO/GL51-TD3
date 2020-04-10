@@ -16,8 +16,8 @@ class MovieClientImplTest extends Specification {
 
     void "injection should work"() {
         expect:
-        registry != null
-        client != null
+            registry != null
+            client != null
     }
 
     void "favorites should be empty"() {
