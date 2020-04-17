@@ -19,7 +19,7 @@ class MovieController {
     HttpStatus index() {
         return HttpStatus.OK
     }
-    
+
     @Post('/')
     HttpStatus addMovie(MovieRequest movieRequest) {
         registry.addMovieToFavorites(movieRequest.getImdbID())
