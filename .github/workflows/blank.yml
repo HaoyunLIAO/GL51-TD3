@@ -4,11 +4,7 @@ name: CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push, pull_request]
 
 jobs:
   gradle:
@@ -24,4 +20,4 @@ jobs:
       # do not forget `git update-index --chmod=+x gradlew` to fix permission before !
       - uses: eskatos/gradle-command-action@v1
         with:
-          arguments: test
+          arguments: check

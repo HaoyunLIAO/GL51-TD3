@@ -16,8 +16,9 @@ class MovieController {
     MovieRegistry registry
 
     @Get("/")
-    HttpStatus index() {
-        return HttpStatus.OK
+    List<Movie> index() {
+        []
+
     }
 
     @Post('/')
