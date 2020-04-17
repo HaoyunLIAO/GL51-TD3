@@ -10,8 +10,7 @@ import javax.inject.Inject
 @MicronautTest
 class MovieRegistryImplTest extends Specification {
 
-    @Inject
-    MovieRegistryImpl registry
+    @Inject MovieRegistryImpl registry
 
     void "injectionShouldWork"() {
         expect:
@@ -29,6 +28,7 @@ class MovieRegistryImplTest extends Specification {
         then:
         registry.listFavorites().size() == 1
         registry.listFavorites().find({ it.title == 'my movie' })
+
     }
 
     @MockBean(MovieClientImpl)

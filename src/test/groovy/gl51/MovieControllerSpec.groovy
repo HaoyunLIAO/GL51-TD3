@@ -41,6 +41,7 @@ class MovieControllerSpec extends Specification {
         HttpResponse response = client.toBlocking().exchange(
                 HttpRequest.POST("/movie", new MovieRequest(imdbID: "lhy"))
         )
+
         expect:
         response.status == HttpStatus.CREATED
         registry.listFavorites().find{ it.title == 'best movie' }
@@ -51,6 +52,7 @@ class MovieControllerSpec extends Specification {
     MovieClient movieClient() {
         def mock = Mock(MovieClient)
         mock.getMovieDetail("lhy") >> new Movie(imdbID: "lhy", title: "best movie")
+
         mock
     }
 }

@@ -10,7 +10,6 @@ import io.micronaut.http.annotation.Post
 
 import javax.inject.Inject
 
-
 @Controller("/movie")
 class MovieController {
     @Inject
@@ -19,6 +18,7 @@ class MovieController {
     @Get("/")
     List<Movie> index() {
         []
+
     }
 
     @Post('/')
