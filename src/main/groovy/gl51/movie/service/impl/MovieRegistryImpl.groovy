@@ -16,8 +16,8 @@ class MovieRegistryImpl implements MovieRegistry {
     @Inject
     private MovieClient movieClient
     @Override
-        void addMovieToFavorites(String ID) {
-            internalRegistry << movieClient.getMovieDetail(ID)
+        void addMovieToFavorites(String id) {
+            internalRegistry << movieClient.getMovieDetail(id)
         }
 
         @Override
